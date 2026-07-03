@@ -1,0 +1,45 @@
+<section class="skills" id="skills">
+  <div class="skills-fade"></div>
+  
+  <div class="skills-header">
+   
+    <h2 class="s-title anim-slide-left" style="animation-delay: 0.1s">
+      HERRAMIENTAS<br>
+      <span class="gradient-text">QUE DOMINO.</span>
+    </h2>
+    
+    <!-- Indicador visual -->
+    <div class="skills-indicator anim-scale" style="animation-delay: 0.2s">
+      <span class="indicator-dot"></span>
+      <span class="indicator-text">Tecnologías principales</span>
+    </div>
+  </div>
+
+  <div class="skills-grid">
+    @for (sk of stacks; track sk.num; let i = $index) {
+      <div class="skill-card anim-fade-up" 
+           [class.hot]="sk.hot"
+           [class.design]="sk.category === 'design'"
+           [style.animation-delay]="(i * 0.03) + 's'">
+        
+        <div class="sk-front">
+          <div class="sk-num">{{ sk.num }}</div>
+          <div class="sk-name">{{ sk.name }}</div>
+          <div class="sk-type">{{ sk.type }}</div>
+          <div class="sk-line"></div>
+        </div>
+        
+        <!-- Tooltip con descripción -->
+        <div class="sk-tooltip">{{ sk.description }}</div>
+      </div>
+    }
+  </div>
+  
+  <!-- Mensaje de enfoque -->
+  <div class="skills-footer anim-fade-up" style="animation-delay: 0.4s">
+    <div class="focus-badge">
+      <span class="focus-dot"></span>
+      <span>Especializado en desarrollo fullstack y diseño UI/UX</span>
+    </div>
+  </div>
+</section>

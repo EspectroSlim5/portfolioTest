@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Unbounded:wght@900&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #080808;
+  color: #f0ede8;
+  font-family: 'Space Mono', monospace;
+  overflow-x: hidden;
+}
+
+/* Canvas fijo detrás de todo */
+#globalCanvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  opacity: 0.22;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Todas las secciones encima del canvas */
+app-navbar, app-hero, app-about, app-skills, app-contact {
+  position: relative;
+  z-index: 1;
+}
+
+/* Animaciones */
+.anim {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.anim.from-left  { transform: translateX(-40px); }
+.anim.from-right { transform: translateX(40px); }
+.anim.visible    { opacity: 1 !important; transform: none !important; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #080808; }
+::-webkit-scrollbar-thumb { background: #cc2222; }

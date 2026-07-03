@@ -1,0 +1,15 @@
+﻿# Angular
+dist/
+node_modules/
+.angular/
+*.log
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
