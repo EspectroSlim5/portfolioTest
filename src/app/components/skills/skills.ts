@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-skills',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './skills.html',
-  styleUrls: ['./skills.css']
+    selector: 'app-skills',
+    imports: [CommonModule],
+    templateUrl: './skills.html',
+    styleUrls: ['./skills.css']
 })
 export class Skills {
   stacks = [

@@ -6,10 +6,9 @@ import { Skills } from './components/skills/skills';
 import { Contact } from './components/contact/contact';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [Navbar, Hero, About, Skills, Contact],
-  template: `
+    selector: 'app-root',
+    imports: [Navbar, Hero, About, Skills, Contact],
+    template: `
     <canvas id="globalCanvas"></canvas>
     <app-navbar></app-navbar>
     <app-hero></app-hero>

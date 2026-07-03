@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-navbar',
-  standalone: true,
-  imports: [CommonModule],
-  // En navbar.ts, solo cambia el template:
-template: `
+    selector: 'app-navbar',
+    imports: [CommonModule],
+    // En navbar.ts, solo cambia el template:
+    template: `
   <nav class="nav" [class.scrolled]="scrolled">
     <div class="nav-logo">
       <span class="bracket">[</span>
@@ -21,7 +20,7 @@ template: `
     
   </nav>
 `,
-  styles: [`
+    styles: [`
     :host {
       position: fixed;
       top: 0; left: 0; right: 0;
